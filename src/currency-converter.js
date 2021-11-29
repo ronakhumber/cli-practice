@@ -54,10 +54,10 @@ if(sourceCur === undefined) {
 
 const rates = {
     CAD: {
-		USD: 0.79871
+		USD: 0.78
 	},
     USD: {
-        CAD: 1.2520
+        CAD: 1.28
     }
 }
 
@@ -102,3 +102,4 @@ let convertedRate = amount * rates[sourceCur][destCur];
 // This message should also include the original amount and currency information
 // supplied by the user.
 
+console.log(`${amount} ${sourceCur} is converted to ${convertedRate} ${destCur}.`)
