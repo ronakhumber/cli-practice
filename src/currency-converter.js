@@ -89,7 +89,6 @@ if (dest === undefined) {
     process.exit()
 }
 
-console.error('Invalid currencies', sourceCur, destCur)
 
 // --------------------------------------------------
 // Step 5: Perform conversion
