@@ -52,7 +52,14 @@ if(sourceCur === undefined) {
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
 
-
+const rates = {
+    CAD: {
+		USD: 0.79871
+	},
+    USD: {
+        CAD: 1.2520
+    }
+}
 
 // --------------------------------------------------
 // Step 4: Ensure that a conversion rate exists
@@ -63,7 +70,19 @@ if(sourceCur === undefined) {
 // If the user supplies an invalid initial or target currency, display a meaningful
 // warning message and exit the program.
 
+let source = rates[sourceCur]
+let dest = rates[destCur]
 
+if (source === undefined) {
+    console.error('Source Currency is Invalid', sourceCur);
+    process.exit()
+} 
+if (dest === undefined) {
+    console.error('Target Currency is Invalid', destCur)
+    process.exit()
+}
+
+console.error('Invalid currencies', sourceCur, destCur)
 
 // --------------------------------------------------
 // Step 5: Perform conversion
@@ -73,7 +92,7 @@ if(sourceCur === undefined) {
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
 
-
+let convertedRate = amount * rates[sourceCur][destCur];
 
 // --------------------------------------------------
 // Step 6: Display results
@@ -82,3 +101,4 @@ if(sourceCur === undefined) {
 
 // This message should also include the original amount and currency information
 // supplied by the user.
+
