@@ -27,7 +27,18 @@ let destCur = process.argv[4]
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
 
-
+if(amount === undefined) {
+    console.error('Please enter amount');
+    process.exit()
+}
+if(destCur === undefined) {
+    console.error('Please enter destination currency');
+    process.exit()
+}
+if(sourceCur === undefined) {
+    console.error('Please enter source currency');
+    process.exit()
+}
 
 // --------------------------------------------------
 // Step 3: Define currency conversion rates
