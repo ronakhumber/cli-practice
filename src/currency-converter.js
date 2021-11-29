@@ -52,12 +52,19 @@ if(sourceCur === undefined) {
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
 
+
 const rates = {
     CAD: {
-		USD: 0.78
+		USD: 0.78,
+        INR: 58.88
 	},
     USD: {
-        CAD: 1.28
+        CAD: 1.28,
+        INR: 75.02
+    },
+    INR: {
+        USD: 0.013,
+        CAD: 0.017
     }
 }
 
