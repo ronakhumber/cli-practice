@@ -15,7 +15,9 @@
 
 // We will store each piece of information in a dedicated variable for later use.
 
-
+let amount = process.argv[2]
+let sourceCur = process.argv[3]
+let destCur = process.argv[4]
 
 // --------------------------------------------------
 // Step 2: Validate user input
